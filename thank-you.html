@@ -3,15 +3,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thank You – PJM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thank You – PJM Engineering</title>
   <meta http-equiv="refresh" content="5; url=https://pjm-06.github.io/pjm-website/">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="flex items-center justify-center h-screen bg-gray-100 text-center">
-  <div>
-    <h1 class="text-4xl font-bold text-green-600 mb-4">✅ Thank you!</h1>
-    <p class="text-lg text-gray-700">We’ve received your request. Redirecting to homepage...</p>
+<body class="flex items-center justify-center min-h-screen bg-gray-100 px-4">
+  <div class="bg-white p-10 rounded-xl shadow-md max-w-md w-full text-center animate-fade-in">
+    <div class="text-green-600 text-6xl mb-4">✅</div>
+    <h1 class="text-3xl font-bold royal-blue mb-2">Thank You!</h1>
+    <p class="text-gray-700">Your request has been submitted successfully.<br>We’ll get back to you soon.</p>
+    <p class="text-sm text-gray-500 mt-4">Redirecting to homepage in 5 seconds...</p>
+    <a href="index.html" class="mt-6 inline-block bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-full font-semibold transition">Return Now</a>
   </div>
+
+  <style>
+    .royal-blue { color: #002366; }
+    @keyframes fade-in { from {opacity:0; transform: translateY(20px);} to {opacity:1; transform: none;} }
+    .animate-fade-in { animation: fade-in 0.6s ease-out both; }
+  </style>
 </body>
 </html>
