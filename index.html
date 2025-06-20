@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,26 +30,22 @@
   </button>
 </section>
 
-
 <!-- FORM POPUP -->
 <div id="popupForm" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
   <div class="bg-white rounded-lg p-8 max-w-md w-full shadow-lg">
     <h2 class="text-2xl font-bold mb-4 royal-blue">Request Form</h2>
 
     <form action="https://formsubmit.co/pjdaet8@gmail.com" method="POST" class="space-y-4">
-      <!-- Hidden configuration fields -->
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="box">
       <input type="hidden" name="_subject" value="New Consultation or Quotation Request!">
       <input type="hidden" name="_next" value="https://formsubmit.co/thanks.html">
 
-      <!-- User inputs -->
       <input type="text" name="name" placeholder="Your Full Name" required class="w-full p-2 border rounded" />
       <input type="email" name="email" placeholder="Your Email Address" required class="w-full p-2 border rounded" />
       <input type="text" name="project" placeholder="Project Type (e.g., Residential, Warehouse)" class="w-full p-2 border rounded" />
       <textarea name="message" rows="4" placeholder="Your message or project requirements" class="w-full p-2 border rounded" required></textarea>
 
-      <!-- Buttons -->
       <div class="flex justify-between">
         <button type="submit" class="bg-red text-white px-4 py-2 rounded hover:bg-red-600 transition">Send Message</button>
         <button type="button" onclick="toggleForm()" class="text-sm text-gray-500 hover:underline">Cancel</button>
@@ -58,9 +53,152 @@
     </form>
   </div>
 </div>
+<!-- About Section -->
+<section class="py-12 bg-gray-50">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-3xl font-bold royal-blue mb-4">About Us</h2>
+    <p class="mb-4">
+      PJM Electrical Design and Engineering Services is a professional firm based in the Philippines that specializes in comprehensive electrical system planning, design, documentation, and permit processing across residential, commercial, and industrial sectors.
+    </p>
+    <ul class="list-disc pl-6 mb-4 text-sm md:text-base">
+      <li>Load computations, fault current studies, and voltage drop analysis</li>
+      <li>Lighting simulations using Dialux/Relux and lux level evaluation</li>
+      <li>Distribution layouts, panelboard scheduling, riser diagrams</li>
+      <li>Complete CAD drafting of electrical and auxiliary plans</li>
+      <li>PEC-compliant drawings for permit with sign and seal support</li>
+      <li>As-built plans with technical review and field verification</li>
+    </ul>
+    <div class="mt-6">
+      <h3 class="text-xl font-semibold primary-red mb-2">Mission</h3>
+      <p>To deliver precise, standards-compliant electrical designs that empower infrastructure, ensure safety, and foster technical excellence across the country.</p>
+    </div>
+    <div class="mt-6">
+      <h3 class="text-xl font-semibold primary-red mb-2">Vision</h3>
+      <p>To become a premier provider of electrical engineering and design services in the Philippines, recognized for innovation, professionalism, and impact.</p>
+    </div>
+  </div>
+</section>
 
+<!-- Services Section -->
+<section class="py-16 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold royal-blue text-center mb-10">Our Engineering Services</h2>
+    <div class="grid md:grid-cols-3 gap-8 text-center text-sm md:text-base">
+      <div class="transition transform hover:scale-105 p-4 border rounded shadow">
+        <i data-lucide="cpu" class="mx-auto mb-2 primary-red" width="32" height="32"></i>
+        <h3 class="text-lg font-bold primary-red mb-2">Load Analysis</h3>
+        <p>Connected loads, voltage drop, short circuit evaluation, and protection coordination.</p>
+      </div>
+      <div class="transition transform hover:scale-105 p-4 border rounded shadow">
+        <i data-lucide="server-cog" class="mx-auto mb-2 primary-red" width="32" height="32"></i>
+        <h3 class="text-lg font-bold primary-red mb-2">Power Distribution Design</h3>
+        <p>Panelboards, riser diagrams, feeder schedules, and PEC-conforming circuit layouts.</p>
+      </div>
+      <div class="transition transform hover:scale-105 p-4 border rounded shadow">
+        <i data-lucide="sun" class="mx-auto mb-2 primary-red" width="32" height="32"></i>
+        <h3 class="text-lg font-bold primary-red mb-2">Lighting Simulation</h3>
+        <p>Lighting layout and lux level studies using Dialux and Relux for energy efficiency and uniformity.</p>
+      </div>
+      <div class="transition transform hover:scale-105 p-4 border rounded shadow">
+        <i data-lucide="file-text" class="mx-auto mb-2 primary-red" width="32" height="32"></i>
+        <h3 class="text-lg font-bold primary-red mb-2">CAD Drafting & Diagrams</h3>
+        <p>Complete CAD drawings of layouts, SLDs, schematics, and auxiliary systems.</p>
+      </div>
+      <div class="transition transform hover:scale-105 p-4 border rounded shadow">
+        <i data-lucide="clipboard-list" class="mx-auto mb-2 primary-red" width="32" height="32"></i>
+        <h3 class="text-lg font-bold primary-red mb-2">BOQ / BOM & Estimation</h3>
+        <p>Detailed quantity take-offs and material costings using PlanSwift and Excel tools.</p>
+      </div>
+      <div class="transition transform hover:scale-105 p-4 border rounded shadow">
+        <i data-lucide="check-square" class="mx-auto mb-2 primary-red" width="32" height="32"></i>
+        <h3 class="text-lg font-bold primary-red mb-2">Permit Compliance</h3>
+        <p>Document preparation for permit application, including sign/seal support and PEC review.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Highlighted Projects Section -->
+<section class="py-16 bg-gray-100">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold royal-blue text-center mb-10">Highlighted Projects Since 2021</h2>
 
-<!-- Contact Info -->
+    <div class="space-y-8 text-sm md:text-base">
+      <div>
+        <h3 class="text-xl font-semibold primary-red">As-Built Plans & Design Analysis</h3>
+        <ul class="list-disc pl-6 mt-2">
+          <li>FirstMac Company – Ayala Mall Branch: As-Built Electrical Plan, Voltage Drop, and Short Circuit Analysis</li>
+          <li>GMTI (Gigatt Manufacturing & Trading Inc.) – Batangas City: Full As-Built and Electrical System Analysis</li>
+          <li>Water Bottling Manufacturing Plant – Turbina: As-Built Plan and Auxiliary System Integration</li>
+          <li>TechnoPark Warehouse – Laguna: As-Built with Voltage Drop, Short Circuit, and Arc Flash Study</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold primary-red mt-8">Commercial Design Projects</h3>
+        <ul class="list-disc pl-6 mt-2">
+          <li>Photo-ism – Alabang Branch: Electrical Design, Analysis, Voltage Drop Study</li>
+          <li>Kai Mall – Caloocan City: Electrical Design, Short Circuit and Load Flow Studies</li>
+          <li>Kai Mall Kitchen – Caloocan City: Kitchen-Specific Load Design and Power Layouts</li>
+          <li>Santo Coffee Restaurant – Quezon City: Electrical and Lighting Layout Design</li>
+          <li>Kid’s Kingdom – Makati: Full Electrical, Short Circuit, and Auxiliary Design</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold primary-red mt-8">Industrial & Warehouse Projects</h3>
+        <ul class="list-disc pl-6 mt-2">
+          <li>Shopee Warehouse – Calamba, Laguna: Correction of Lighting Design using Dialux, Quantity Estimation, BOM, and Permit Assistance</li>
+          <li>Techno Park – Sta. Rosa, Laguna: Schedule of Loads, Lighting & Power Layouts</li>
+          <li>Manufacturing Plant – Novaliches: Lighting Design Calculation using Dialux</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold primary-red mt-8">Specialized Commercial & Mixed-Use Buildings</h3>
+        <ul class="list-disc pl-6 mt-2">
+          <li>Hyla PH Headquarters – 4-Storey: Complete Electrical Design with Voltage Drop & Short Circuit Study</li>
+          <li>Vertex Climbing Gym: Full Electrical System Design with Load Study</li>
+          <li>Sawada Ichigo – BGC Makati: Electrical Design with Auxiliary Systems</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold primary-red mt-8">Freelance Design Services</h3>
+        <ul class="list-disc pl-6 mt-2">
+          <li>Electrical Design and Auxiliary Systems (Residential, Commercial, Mid-Rise, High-Rise)</li>
+          <li>Permit Assistance and PEC-Compliant Sign & Seal Support</li>
+          <li>Lighting Design with Luminance Simulation (Dialux / Relux)</li>
+          <li>Cost Estimation and Quantity Take-off using PlanSwift</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Achievements & Certifications -->
+<section class="py-16 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold royal-blue text-center mb-10">Certifications & Trainings</h2>
+
+    <ul class="list-disc pl-6 space-y-2 text-sm md:text-base">
+      <li>AutoCAD Electrical Essential Training – LinkedIn Learning (Aug 26, 2022)</li>
+      <li>Revit for Electrical Design Professionals – LinkedIn Learning (Nov 7, 2023)</li>
+      <li>SketchUp Pro 2022 Essential Training – LinkedIn Learning (Apr 9, 2023)</li>
+      <li>Seminars at Mapúa Malayan Colleges Laguna – Electrical Systems & Design Topics</li>
+      <li>Power Line Seminars – IIEE (2021–2022)</li>
+      <li>PEC 2017 Compliance & Safety Seminars – IIEE (Sept 2021)</li>
+      <li>High Voltage Equipment & Arc Flash Seminar – IIEE (Oct 2021)</li>
+      <li>Electricity Safety Audit & Inspection – IIEE (Oct 2021)</li>
+      <li>Hack The Boards (REE Exam Techniques) – IIEE (Feb 2022)</li>
+    </ul>
+
+    <div class="mt-8 text-center">
+      <p class="text-base royal-blue font-semibold">Prudence Joe V. Daet</p>
+      <p class="text-sm text-gray-600">Electrical Engineer</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
 <section class="py-12 text-center bg-royal-blue text-white">
   <h2 class="text-3xl font-bold primary-red mb-4">Get in Touch</h2>
   <p>📍 Araya Park Residences, Sta. Rosa, Laguna</p>
@@ -69,13 +207,13 @@
   <a href="https://www.facebook.com/share/18vy47eWWA/?mibextid=wwXIfr" class="underline hover:text-red-300">Visit Facebook Page</a>
 </section>
 
-<!-- Script -->
+<!-- Scripts -->
 <script>
   function toggleForm() {
-    const popup = document.getElementById('popupForm');
-    popup.classList.toggle('hidden');
+    document.getElementById('popupForm').classList.toggle('hidden');
   }
   lucide.createIcons();
 </script>
+
 </body>
 </html>
