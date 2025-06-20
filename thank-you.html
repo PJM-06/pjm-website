@@ -1,60 +1,17 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thank You – PJM Engineering</title>
+  <title>Thank You – PJM</title>
   <meta http-equiv="refresh" content="5; url=https://pjm-06.github.io/pjm-website/">
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body { font-family: 'Segoe UI', sans-serif; }
-    .royal-blue { color: #002366; }
-    .bg-royal-blue { background-color: #002366; }
-    .primary-red { color: #e63946; }
-    .bg-primary-red { background-color: #e63946; }
-    .shadow-card { box-shadow: 0 10px 25px rgba(0,0,0,.1); }
-
-    @keyframes bounceIn {
-      0% { opacity: 0; transform: scale(0.7) translateY(50px); }
-      60% { opacity: 1; transform: scale(1.05) translateY(-10px); }
-      80% { transform: scale(0.98) translateY(3px); }
-      100% { transform: scale(1) translateY(0); }
-    }
-    .animate-bounce-in {
-      animation: bounceIn 0.8s ease-out forwards;
-    }
-  </style>
 </head>
-<body class="min-h-screen flex items-center justify-center bg-gray-100 px-4">
-
-  <!-- Card -->
-  <div class="bg-white rounded-2xl shadow-card p-10 w-full max-w-lg text-center animate-bounce-in">
-    
-    <!-- Logo -->
-    <img src="pjm-logo.png" alt="PJM Logo" class="mx-auto w-24 h-auto mb-6" />
-
-    <!-- Check Icon -->
-    <div class="flex items-center justify-center w-16 h-16 mx-auto mb-6 rounded-full bg-royal-blue shadow-md">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none"
-           viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
-      </svg>
-    </div>
-
-    <!-- Heading + Text -->
-    <h1 class="text-3xl font-bold royal-blue mb-2">Thank You!</h1>
-    <p class="text-gray-700 mb-6">
-      Your request has been sent successfully.<br>
-      We'll get back to you via email as soon as possible.<br>
-      <span class="text-sm text-gray-500 mt-2 block">Redirecting back to homepage in 5 seconds...</span>
-    </p>
-
-    <!-- Button (fallback) -->
-    <a href="https://pjm-06.github.io/pjm-website/"
-       class="inline-block bg-primary-red hover:bg-red-600 text-white px-6 py-2 rounded-full font-semibold transition-all duration-300 ease-in-out">
-      Return to Home
-    </a>
+<body class="flex items-center justify-center h-screen bg-gray-100 text-center">
+  <div>
+    <h1 class="text-4xl font-bold text-green-600 mb-4">✅ Thank you!</h1>
+    <p class="text-lg text-gray-700">We’ve received your request. Redirecting to homepage...</p>
   </div>
-
 </body>
 </html>
