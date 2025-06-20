@@ -37,9 +37,9 @@
 
     <form action="https://formsubmit.co/pjdaet8@gmail.com" method="POST" class="space-y-4">
       <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://pjm-06.github.io/pjm-website/thank-you.html">
       <input type="hidden" name="_template" value="box">
       <input type="hidden" name="_subject" value="New Consultation or Quotation Request!">
-      <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
 
       <input type="text" name="name" placeholder="Your Full Name" required class="w-full p-2 border rounded" />
       <input type="email" name="email" placeholder="Your Email Address" required class="w-full p-2 border rounded" />
@@ -47,12 +47,13 @@
       <textarea name="message" rows="4" placeholder="Your message or project requirements" class="w-full p-2 border rounded" required></textarea>
 
       <div class="flex justify-between">
-        <button type="submit" class="bg-red text-white px-4 py-2 rounded hover-bg-red">Send Message</button>
+        <button type="submit" class="bg-red text-white px-4 py-2 rounded hover:bg-red-600 transition">Send Message</button>
         <button type="button" onclick="toggleForm()" class="text-sm text-gray-500 hover:underline">Cancel</button>
       </div>
     </form>
   </div>
 </div>
+
 
 <!-- About Us -->
 <section class="py-12 bg-gray-50">
@@ -244,3 +245,10 @@
 </script>
 </body>
 </html>
+
+<script>
+  function toggleForm() {
+    document.getElementById('popupForm').classList.toggle('hidden');
+  }
+  lucide.createIcons();
+</script>
