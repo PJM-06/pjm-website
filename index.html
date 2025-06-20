@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PJM Electrical Design and Engineering Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffffff;
+      color: #1a1a1a;
+    }
+    .royal-blue { color: #002366; }
+    .bg-royal-blue { background-color: #002366; }
+    .primary-red { color: #e63946; }
+    .bg-red { background-color: #e63946; color: white; }
+    .hover-bg-red:hover { background-color: #cc2f3d; }
+  </style>
+</head>
+<body class="scroll-smooth">
+
+  <!-- Hero Section -->
+  <section class="text-center py-16 px-6">
+    <h1 class="text-4xl md:text-5xl font-bold royal-blue mb-4">PJM Electrical Design and Engineering Services</h1>
+    <p class="text-lg max-w-2xl mx-auto">Engineering precision meets creative design. We offer full-spectrum electrical and electronics solutions—from system design to field implementation.</p>
+    <button onclick="toggleForm()" class="inline-block mt-6 bg-red px-6 py-3 rounded-full font-semibold hover-bg-red transition transform hover:scale-105">
+      Request a Consultation and Quotation
+    </button>
+  </section>
+
+  <!-- Form Popup -->
+  <div id="popupForm" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+    <div class="bg-white rounded-lg p-8 max-w-md w-full shadow-lg">
+      <h2 class="text-2xl font-bold mb-4 royal-blue">Request Form</h2>
+      <form action="https://formsubmit.co/pjdaet8@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="name" placeholder="Your Name" class="w-full p-2 mb-3 border rounded" required>
+        <input type="email" name="email" placeholder="Your Email" class="w-full p-2 mb-3 border rounded" required>
+        <input type="text" name="project" placeholder="Project Type (e.g. Residential, Warehouse)" class="w-full p-2 mb-3 border rounded">
+        <textarea name="message" placeholder="Your Message / Requirements" class="w-full p-2 mb-3 border rounded" rows="4"></textarea>
+        <div class="flex justify-between">
+          <button type="submit" class="bg-red text-white px-4 py-2 rounded hover-bg-red">Submit</button>
+          <button type="button" onclick="toggleForm()" class="text-sm text-gray-500 hover:underline">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold royal-blue mb-4">About Us</h2>
+      <p class="mb-4">
+        PJM Electrical Design and Engineering Services is a Philippine-based firm specializing in the design, analysis, drafting, and installation of electrical and electronics systems.
+      </p>
+      <p class="mb-4">
+        We provide load computations, fault current studies, circuit protection, and distribution layouts. Our work is fully PEC-compliant and supported by detailed BOQ/BOM, CAD diagrams, and Dialux simulations.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold royal-blue text-center mb-10">Our Technical Services</h2>
+      <div class="grid md:grid-cols-3 gap-8 text-center text-sm">
+        <div class="transition transform hover:scale-105 p-4 border rounded shadow">
+          <i data-lucide="activity" class="mx-auto mb-2 primary-red" width="32" height="32"></i>
+          <h3 class="text-lg font-bold primary-red mb-2">Load Analysis</h3>
+          <p>Load balancing, voltage drop, and circuit design with safety compliance.</p>
+        </div>
+        <div class="transition transform hover:scale-105 p-4 border rounded shadow">
+          <i data-lucide="server" class="mx-auto mb-2 primary-red" width="32" height="32"></i>
+          <h3 class="text-lg font-bold primary-red mb-2">Power Distribution</h3>
+          <p>Panelboards, riser diagrams, and distribution layouts.</p>
+        </div>
+        <div class="transition transform hover:scale-105 p-4 border rounded shadow">
+          <i data-lucide="sun" class="mx-auto mb-2 primary-red" width="32" height="32"></i>
+          <h3 class="text-lg font-bold primary-red mb-2">Lighting Simulation</h3>
+          <p>Dialux-based photometric analysis and illuminance optimization.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Project -->
+  <section class="py-16 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold royal-blue text-center mb-10">Featured Project</h2>
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <img src="warehouse_project.jpg" alt="Shopee Warehouse Project" class="rounded shadow transition hover:scale-105 duration-300">
+        <div>
+          <h3 class="text-xl font-semibold royal-blue mb-2">Shopee Warehouse – Lighting & Load Redesign</h3>
+          <p><strong>Location:</strong> Calamba, Laguna</p>
+          <p>This project utilized Dialux simulation to optimize lighting layouts, recalculate loads, and redesign circuits for code compliance and permit processing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-12 text-center bg-royal-blue text-white">
+    <h2 class="text-3xl font-bold primary-red mb-4">Get in Touch</h2>
+    <p>📍 Araya Park Residences, Sta. Rosa, Laguna</p>
+    <p>📞 +63 928 309 5807</p>
+    <p>📧 pjdaet8@gmail.com</p>
+    <a href="https://www.facebook.com/share/16RppCEwut/?mibextid=wwXIfr" class="underline hover:text-red-300">Visit Facebook Page</a>
+  </section>
+
+  <script>
+    lucide.createIcons();
+    function toggleForm() {
+      document.getElementById('popupForm').classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>
