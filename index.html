@@ -30,10 +30,29 @@
   </button>
 </section>
 
-<form action="https://formsubmit.co/pjdaet8@gmail.com" method="POST" class="space-y-4">
-  ...
-</form>
+<!-- FORM POPUP -->
+<div id="popupForm" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+  <div class="bg-white rounded-lg p-8 max-w-md w-full shadow-lg">
+    <h2 class="text-2xl font-bold mb-4 royal-blue">Request Form</h2>
 
+    <form action="https://formsubmit.co/pjdaet8@gmail.com" method="POST" class="space-y-4">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="box">
+      <input type="hidden" name="_subject" value="New Consultation or Quotation Request!">
+      <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+
+      <input type="text" name="name" placeholder="Your Full Name" required class="w-full p-2 border rounded" />
+      <input type="email" name="email" placeholder="Your Email Address" required class="w-full p-2 border rounded" />
+      <input type="text" name="project" placeholder="Project Type (e.g., Residential, Warehouse)" class="w-full p-2 border rounded" />
+      <textarea name="message" rows="4" placeholder="Your message or project requirements" class="w-full p-2 border rounded" required></textarea>
+
+      <div class="flex justify-between">
+        <button type="submit" class="bg-red text-white px-4 py-2 rounded hover-bg-red">Send Message</button>
+        <button type="button" onclick="toggleForm()" class="text-sm text-gray-500 hover:underline">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
 
 <!-- About Us -->
 <section class="py-12 bg-gray-50">
@@ -71,6 +90,15 @@
     </div>
   </div>
 </section>
+
+<!-- JavaScript (place before </body>) -->
+<script>
+  function toggleForm() {
+    const popup = document.getElementById('popupForm');
+    popup.classList.toggle('hidden');
+  }
+  lucide.createIcons(); // activates icons
+</script>
 <!-- Services Section -->
 <section class="py-16 bg-white">
   <div class="max-w-6xl mx-auto px-4">
@@ -109,6 +137,7 @@
     </div>
   </div>
 </section>
+
 
 <!-- Featured Project -->
 <section class="py-16 bg-gray-100">
