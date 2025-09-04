@@ -17,32 +17,49 @@
     .primary-red { color: #e63946; }
     .bg-red { background-color: #e63946; color: white; }
     .hover-bg-red:hover { background-color: #cc2f3d; }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeIn {
+      animation: fadeIn 2s ease-in-out forwards;
+    }
+    .animate-fadeInUp {
+      animation: fadeInUp 2s ease-in-out forwards;
+    }
   </style>
 </head>
 <body class="scroll-smooth">
 
 <!-- Hero Section -->
-<section class="text-center py-16 px-6">
-  <h1 class="text-4xl md:text-5xl font-bold royal-blue mb-4">PJM Electrical Design and Engineering Services</h1>
-  <p class="text-lg max-w-2xl mx-auto">Engineering precision meets creative design. We offer full-spectrum electrical and electronics solutions—from system design to field implementation.</p>
-  <button onclick="toggleForm()" class="inline-block mt-6 bg-red px-6 py-3 rounded-full font-semibold hover-bg-red transition transform hover:scale-105">
-    Request a Consultation and Quotation
-  </button>
+<section class="relative text-center py-24 px-6 bg-cover bg-center animate-fadeIn"
+         style="background-image: url('pjm-logo.png'); background-size: 400px; background-repeat: no-repeat; background-position: center;">
+  <!-- White overlay -->
+  <div class="absolute inset-0 bg-white bg-opacity-90"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 animate-fadeInUp">
+    <h1 class="text-4xl md:text-5xl font-bold royal-blue mb-4">PJM Electrical Design and Engineering Services</h1>
+    <p class="text-lg max-w-2xl mx-auto">Engineering precision meets creative design. We offer full-spectrum electrical and electronics solutions—from system design to field implementation.</p>
+    <button onclick="toggleForm()" class="inline-block mt-6 bg-red px-6 py-3 rounded-full font-semibold hover-bg-red transition transform hover:scale-105">
+      Request a Consultation and Quotation
+    </button>
+  </div>
 </section>
 
 <!-- About Section -->
 <section class="py-12 bg-gray-50 text-black">
   <div class="max-w-5xl mx-auto px-4">
     <h2 class="text-3xl font-bold royal-blue mb-4">About Us</h2>
-    <p class="mb-4">
-      PJM Electrical Design and Engineering Services is a dynamic, multi-disciplinary engineering firm based in the Philippines that focuses on delivering high-quality, code-compliant, and technically sound electrical design solutions for residential, commercial, and industrial developments. We bring forward an extensive background in electrical planning, analysis, and documentation, underpinned by a passion for innovation and attention to detail.
-    </p>
-    <p class="mb-4">
-      Our core expertise lies in conducting detailed load computations, voltage drop analysis, short circuit and fault current studies, as well as lighting simulations using advanced software like Dialux and Relux. We produce fully coordinated construction drawings, including complete CAD plans, panelboard schedules, single-line diagrams, and auxiliary layouts compliant with the Philippine Electrical Code (PEC).
-    </p>
-    <p class="mb-4">
-      PJM also provides essential design analysis reports, detailed bill of quantities and material estimations (BOQ/BOM), and handles permit acquisition support including engineering sign and seal services. Our firm also supports as-built plan generation and site-based validation for real-world integration. With a client-first mindset and up-to-date technical training, PJM strives to raise the standards of electrical engineering design practice.
-    </p>
+    <p class="mb-4">PJM Electrical Design and Engineering Services is a dynamic, multi-disciplinary engineering firm based in the Philippines that focuses on delivering high-quality, code-compliant, and technically sound electrical design solutions for residential, commercial, and industrial developments.</p>
+    <p class="mb-4">Our core expertise lies in conducting detailed load computations, voltage drop analysis, short circuit and fault current studies, as well as lighting simulations using advanced software like Dialux and Relux. We produce fully coordinated construction drawings, including CAD plans, panelboard schedules, single-line diagrams, and auxiliary layouts compliant with the Philippine Electrical Code (PEC).</p>
+    <p class="mb-4">PJM also provides essential design analysis reports, detailed bill of quantities and material estimations (BOQ/BOM), and handles permit acquisition support including engineering sign and seal services. Our firm also supports as-built plan generation and site-based validation for real-world integration.</p>
     <div class="mt-6">
       <h3 class="text-xl font-semibold primary-red mb-2">Mission</h3>
       <p>To deliver precise, standards-compliant electrical designs that empower infrastructure, ensure safety, and foster technical excellence across the country.</p>
@@ -57,7 +74,7 @@
 <!-- FORM POPUP -->
 <div id="popupForm" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
   <div class="bg-white rounded-lg p-8 max-w-md w-full shadow-lg text-black">
-    <h2 class="text-2xl font-bold mb-4" style="color: var(--main-text);">Request Form</h2>
+    <h2 class="text-2xl font-bold mb-4">Request Form</h2>
     <form action="https://formsubmit.co/pjdaet8@gmail.com" method="POST" class="space-y-4">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="box">
@@ -74,17 +91,6 @@
     </form>
   </div>
 </div>
-
-<!-- Scripts -->
-<script>
-  function toggleForm() {
-    document.getElementById('popupForm').classList.toggle('hidden');
-  }
-  lucide.createIcons();
-</script>
-
-</body>
-</html>
 
 <!-- Services Section -->
 <section class="py-16 bg-white">
@@ -134,21 +140,16 @@
       <div>
         <h3 class="text-xl font-semibold royal-blue mb-2">Shopee Warehouse – Lighting & Load Redesign</h3>
         <p><strong>Location:</strong> Calamba, Laguna</p>
-        <p class="mt-2">
-          This project involved correcting the existing lighting layout using Dialux simulation to ensure optimal lux levels, revising the load schedule, recalculating voltage drop, and preparing the complete Bill of Materials (BOM). Final outputs were used for permit assistance and field implementation.
-        </p>
+        <p class="mt-2">This project involved correcting the existing lighting layout using Dialux simulation to ensure optimal lux levels, revising the load schedule, recalculating voltage drop, and preparing the complete Bill of Materials (BOM). Final outputs were used for permit assistance and field implementation.</p>
       </div>
     </div>
   </div>
 </section>
 
-
-
 <!-- Highlighted Projects Section -->
 <section class="py-16 bg-gray-100">
   <div class="max-w-6xl mx-auto px-4">
     <h2 class="text-3xl font-bold royal-blue text-center mb-10">Highlighted Projects Since 2021</h2>
-
     <div class="space-y-8 text-sm md:text-base">
       <div>
         <h3 class="text-xl font-semibold primary-red">As-Built Plans & Design Analysis</h3>
@@ -190,7 +191,7 @@
       </div>
 
       <div>
-        <h3 class="text-xl font-semibold primary-red mt-8"> Services Offered </h3>
+        <h3 class="text-xl font-semibold primary-red mt-8">Services Offered</h3>
         <ul class="list-disc pl-6 mt-2">
           <li>Electrical Design and Auxiliary Systems (Residential, Commercial, Mid-Rise, High-Rise)</li>
           <li>Permit Assistance and PEC-Compliant Sign & Seal Support</li>
@@ -202,27 +203,111 @@
   </div>
 </section>
 
- <!-- Office Location Map -->
-<section class="py-16 bg-gray-100 text-center">
-  <h2 class="text-3xl font-bold royal-blue mb-6">Visit Our Office</h2>
-  <p class="mb-6 text-gray-600">Barangay Tagapo, Sta. Rosa, Laguna, Philippines</p>
-  <div class="flex justify-center">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15449.273476262657!2d121.1058285!3d14.2841865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd611af27be35d%3A0x6ff4ddf79d6fbe96!2sTagapo%2C%20Santa%20Rosa%2C%20Laguna!5e0!3m2!1sen!2sph!4v1718914294494!5m2!1sen!2sph"
-      width="100%" height="350" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
+<!-- Training & Certifications Section -->
+<section class="py-16 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold royal-blue mb-4">Training & Certifications</h2>
+    <p class="text-gray-600 mb-10">Official recognitions and professional training completed by PJM to ensure trusted and up-to-date engineering services.</p>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="p-6 bg-white rounded-2xl shadow-lg border hover:scale-105 transition">
+        <i data-lucide="award" class="mx-auto mb-4 primary-red" width="40" height="40"></i>
+        <h3 class="font-semibold royal-blue mb-2">Electrical Design Masterclass</h3>
+        <p class="text-sm text-gray-600">Comprehensive PEC-compliant design training with advanced analysis tools.</p>
+      </div>
+      <div class="p-6 bg-white rounded-2xl shadow-lg border hover:scale-105 transition">
+        <i data-lucide="award" class="mx-auto mb-4 primary-red" width="40" height="40"></i>
+        <h3 class="font-semibold royal-blue mb-2">AutoCAD Electrical Professional</h3>
+        <p class="text-sm text-gray-600">Certified proficiency in CAD drafting, SLDs, schematics, and auxiliary layouts.</p>
+      </div>
+      <div class="p-6 bg-white rounded-2xl shadow-lg border hover:scale-105 transition">
+        <i data-lucide="award" class="mx-auto mb-4 primary-red" width="40" height="40"></i>
+        <h3 class="font-semibold royal-blue mb-2">Lighting Simulation (Dialux / Relux)</h3>
+        <p class="text-sm text-gray-600">Certified expertise in lighting design, simulation, and energy efficiency studies.</p>
+      </div>
+    </div>
   </div>
 </section>
 
+<!-- Bottom CTA Section -->
+<section class="py-16 bg-royal-blue text-white text-center">
+  <h2 class="text-3xl font-bold mb-4">Ready to Start Your Project?</h2>
+  <p class="mb-6 text-lg">Book a consultation today or request a free estimate — let’s bring your ideas to life with precision and expertise.</p>
+  <div class="space-x-4">
+    <button onclick="toggleForm()" class="bg-red px-6 py-3 rounded-full font-semibold hover-bg-red transition transform hover:scale-105">
+      Book a Consultation Now
+    </button>
+    <button onclick="toggleForm()" class="bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-500 transition transform hover:scale-105">
+      Get a Free Estimate
+    </button>
+  </div>
+</section>
+
+<!-- Office Location Map -->
+<section class="py-16 bg-gray-100 text-center">
+  <h2 class="text-3xl font-bold royal-blue mb-6">Visit Our Office</h2>
+  <p class="mb-6 text-gray-600">Barangay Tagapo, Sta. Rosa, Laguna, Philippines</p>
+
+  <div class="flex justify-center">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15449.273476262657!2d121.1058285!3d14.2841865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd611af27be35d%3A0x6ff4ddf79d6fbe96!2sTagapo%2C%20Santa%20Rosa%2C%20Laguna!5e0!3m2!1sen!2sph!4v1718914294494!5m2!1sen!2sph"
+      width="100%" height="350" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  <!-- Directions Button -->
+  <div class="mt-6">
+    <a href="https://www.google.com/maps/dir/?api=1&destination=Tagapo,+Santa+Rosa,+Laguna,+Philippines"
+       target="_blank"
+       class="bg-red text-white px-6 py-3 rounded-full font-semibold shadow hover:bg-red-600 transition">
+       🚗 Get Directions
+    </a>
+  </div>
+</section>
 
 <!-- Contact Section -->
 <section class="py-12 text-center bg-royal-blue text-white">
   <h2 class="text-3xl font-bold primary-red mb-4">Contact Us</h2>
-  <p>📍 Barangay, Sta. Rosa, Laguna</p>
-  <p>📞 +63 928 309 5807</p>
-  <p>📧 pjdaet8@gmail.com</p>
-  <a href="https://www.facebook.com/share/18vy47eWWA/?mibextid=wwXIfr" class="underline hover:text-red-300">Visit Facebook Page</a>
+
+  <!-- Location -->
+  <p>📍 Barangay Tagapo, Sta. Rosa, Laguna, Philippines</p>
+
+  <!-- Phone -->
+  <p>📞 <a href="tel:+639283095807" class="underline hover:text-red-300">+63 928 309 5807</a></p>
+
+  <!-- Email -->
+  <p>📧 <a href="mailto:pjdaet8@gmail.com" class="underline hover:text-red-300">pjdaet8@gmail.com</a></p>
+
+  <!-- Contact Buttons -->
+  <div class="flex justify-center flex-wrap gap-4 mt-6">
+    <a href="https://m.me/PJM-Electrical-Designs-and-Engineering-Services" target="_blank"
+       class="bg-[#0084FF] px-6 py-3 rounded-full font-semibold shadow hover:opacity-90 transition">
+      💬 Live Chat
+    </a>
+    <a href="https://wa.me/639283095807" target="_blank"
+       class="bg-green-500 px-6 py-3 rounded-full font-semibold shadow hover:bg-green-600 transition">
+      📱 WhatsApp
+    </a>
+    <a href="tel:+639283095807"
+       class="bg-red px-6 py-3 rounded-full font-semibold shadow hover:bg-red-600 transition">
+      📞 Call Us
+    </a>
+  </div>
+
+  <!-- FB Page -->
+  <div class="mt-6">
+    <a href="https://www.facebook.com/share/1ACfq657ak/?mibextid=wwXIfr"
+       target="_blank"
+       class="underline hover:text-red-300 text-lg font-semibold">
+       🌐 Visit Our Facebook Page
+    </a>
+  </div>
 </section>
+
+<!-- Floating Messenger Bubble -->
+<a href="https://m.me/PJM-Electrical-Designs-and-Engineering-Services" target="_blank"
+   class="fixed bottom-6 right-6 bg-[#0084FF] text-white px-4 py-3 rounded-full shadow-lg hover:opacity-90 transition z-50 flex items-center gap-2">
+  💬 <span class="hidden md:inline">Chat Live with Me</span>
+</a>
 
 <!-- Scripts -->
 <script>
