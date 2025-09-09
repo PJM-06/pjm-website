@@ -146,6 +146,100 @@
   </div>
 </section>
 
+<!-- Thesis Prototyping Section -->
+<section class="py-16 bg-gray-100">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold royal-blue mb-4">Thesis Prototyping</h2>
+    <p class="text-lg text-gray-700 mb-10 italic">
+      “From Research Paper to Working Prototype – We’ve Got You Covered”
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-10 items-center text-left">
+      
+      <!-- Image Slider -->
+      <div class="relative w-full overflow-hidden rounded shadow">
+        <div id="thesisSlider" class="flex transition-transform duration-500">
+          <!-- Slide 1 -->
+          <img src="thesis1.jpg" alt="Thesis Prototyping Project 1" class="w-full object-cover">
+          <!-- Slide 2 -->
+          <img src="thesis2.jpg" alt="Thesis Prototyping Project 2" class="w-full object-cover">
+        </div>
+
+        <!-- Slider Buttons -->
+        <button onclick="prevSlide()" 
+                class="absolute top-1/2 left-2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-80">
+          &#10094;
+        </button>
+        <button onclick="nextSlide()" 
+                class="absolute top-1/2 right-2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-80">
+          &#10095;
+        </button>
+      </div>
+
+      <!-- Text content -->
+      <div>
+        <h3 class="text-xl font-semibold royal-blue mb-2">Academic & Research Prototype Development</h3>
+        <p class="mt-2">
+          We help students and researchers transform their academic concepts into fully working prototypes. 
+          Our team covers <strong>Electrical, Electronics, and Mechanical</strong> systems, ensuring your project 
+          is technically sound and ready for thesis defense or real-world application.
+        </p>
+
+        <!-- Scope -->
+        <ul class="list-disc pl-6 mt-4 text-gray-700 space-y-2">
+          <li><strong>Electrical:</strong> Innovative electrical ideas such as 
+              <em>renewable energy systems (solar, wind, hybrid power)</em>, 
+              smart energy concepts, and sustainable solutions.</li>
+          <li><strong>Electronics:</strong> Microcontrollers (Arduino, ESP32, Raspberry Pi), sensors, actuators, IoT-based projects, and PCB design.</li>
+          <li><strong>Mechanical:</strong> Motor control, automation systems, robotics integration, and fabrication support.</li>
+          <li><strong>Documentation:</strong> Complete thesis package with full write-up from 
+              <strong>Chapter 1 (Introduction)</strong> to 
+              <strong>Chapter 5 (Conclusion & Recommendation)</strong>, 
+              including research methodology, data analysis, and results.</li>
+          <li><strong>Consultation & Mentorship:</strong> Technical guidance to help you present with confidence during thesis defense.</li>
+        </ul>
+
+        <!-- CTA -->
+        <div class="mt-6">
+          <button onclick="toggleForm()" 
+                  class="bg-red px-6 py-3 rounded-full font-semibold text-white hover-bg-red transition transform hover:scale-105">
+            🚀 Start Your Thesis Prototype with Us
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Slider Script -->
+<script>
+  let thesisIndex = 0;
+  const thesisSlider = document.getElementById("thesisSlider");
+  const thesisSlides = thesisSlider.children;
+
+  function showSlide(index) {
+    if (index >= thesisSlides.length) thesisIndex = 0;
+    if (index < 0) thesisIndex = thesisSlides.length - 1;
+    thesisSlider.style.transform = `translateX(${-thesisIndex * 100}%)`;
+  }
+
+  function nextSlide() {
+    thesisIndex++;
+    showSlide(thesisIndex);
+  }
+
+  function prevSlide() {
+    thesisIndex--;
+    showSlide(thesisIndex);
+  }
+
+  // Auto-slide every 5s (optional, can remove if you want manual only)
+  setInterval(() => {
+    nextSlide();
+  }, 5000);
+</script>
+
+
 <!-- Highlighted Projects Section -->
 <section class="py-16 bg-gray-100">
   <div class="max-w-6xl mx-auto px-4">
@@ -197,6 +291,8 @@
           <li>Permit Assistance and PEC-Compliant Sign & Seal Support</li>
           <li>Lighting Design with Luminance Simulation (Dialux / Relux)</li>
           <li>Cost Estimation and Quantity Take-off using PlanSwift</li>
+	  <li>Thesis Prototyping and Documentation</li>
+
         </ul>
       </div>
     </div>
